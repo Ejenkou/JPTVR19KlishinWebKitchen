@@ -126,7 +126,7 @@ public class ManagerServlet extends HttpServlet {
                     break;  
                 }
                 furnitureFacade.create(furniture);
-                request.setAttribute("info", "Пицца\"" +furniture.getName()+ "\" была добавлена");
+                request.setAttribute("info", "Товар\"" +furniture.getName()+ "\" была добавлена");
                 request.getRequestDispatcher("/addFurniture").forward(request, response);
                 break;
             case "/editFurnitureForm":
@@ -170,7 +170,7 @@ public class ManagerServlet extends HttpServlet {
                 furniture.setPrice(Integer.parseInt(price));
                 furnitureFacade.edit(furniture);
                 request.setAttribute("furnitureId", furniture.getId());
-                request.setAttribute("info","Пиццы успешно отредактирована: " + furniture.toString() );
+                request.setAttribute("info","Товары успешно отредактирована: " + furniture.toString() );
                 request.getRequestDispatcher(LoginServlet.pathToJsp.getString("index")).forward(request, response);
                 break;                
             case "/editBuyerForm":

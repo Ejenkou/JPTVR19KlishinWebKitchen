@@ -1,21 +1,21 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-light" style="background-color: #fd7e14;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.jsp">Пиццерия - SoonvaldPizzeria</a>
+    <a class="navbar-brand" href="index.jsp">Кухонные Товары - KlishinKitchenItems</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link <c:if test="${activeListFurnitures eq true}">active</c:if>" aria-current="page" href="listFurnitures">Список пицц</a>
+          <a class="nav-link <c:if test="${activeListFurnitures eq true}">active</c:if>" aria-current="page" href="listFurnitures">Список предметов</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <c:if test="${activePurchaseFurnitureForm eq true}">active</c:if>" href="purchaseFurnitureForm">Список купленных пицц</a>
+          <a class="nav-link <c:if test="${activePurchaseFurnitureForm eq true}">active</c:if>" href="purchaseFurnitureForm">Список купленных предметов</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <c:if test="${activeAddFurniture eq true}">active</c:if>" href="addFurniture">Добавить пиццу</a>
+          <a class="nav-link <c:if test="${activeAddFurniture eq true}">active</c:if>" href="addFurniture">Добавить предмет</a>
         </li>
         <li class="nav-item">
           <a class="nav-link <c:if test="${activeListBuyers eq true}">active</c:if>" href="listBuyers">Список покупателей</a>

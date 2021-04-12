@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class FurnitureFacade extends AbstractFacade<Furniture> {
 
-    @PersistenceContext(unitName = "JPTVR19SoonvaldWebPizzeriaPU")
+    @PersistenceContext(unitName = "JPTVR19KlishinWebKithcenPU")
     private EntityManager em;
 
     @Override

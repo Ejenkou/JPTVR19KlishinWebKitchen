@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Зарегестрироваться</button>
+            <button type="submit" class="btn btn-warning mb-3">Зарегестрироваться</button>
           </div>
        
     </form>

@@ -16,8 +16,8 @@
             </div>
           </div>
           <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Войти</button>
+            <button type="submit" class="btn btn-warning mb-3">Войти</button>
           </div>
-       <p><a href="registrationForm">Регистрация</a></p>
+            <p><a href="registrationForm"  style="color: #fd7e14;">Регистрация</a></p>
     </form>
 </div>

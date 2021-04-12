@@ -91,19 +91,19 @@ public class UserServlet extends HttpServlet {
                 Buyer buyer = user.getBuyer();
                 String furnitureId = request.getParameter("furnitureId");
                 if(furnitureId == null || "".equals(furnitureId)){
-                    request.setAttribute("info","Выберите пиццу");
+                    request.setAttribute("info","Выберите товар");
                     request.getRequestDispatcher("/purchaseFurnitureForm").forward(request, response);
                     break;
                 }
                 Furniture furniture = furnitureFacade.find(Long.parseLong(furnitureId));
                 
                 if (!(furniture.getQuantity()-1>=0)) {
-                    request.setAttribute("info", "Нет пиццы");
+                    request.setAttribute("info", "Нет товара");
                     request.getRequestDispatcher("/index.jsp").forward(request, response);
                     break;
                 } 
                 if (!(buyer.getWallet() >= furniture.getPrice())) {
-                    request.setAttribute("info", "Недостаточно денег для покупки пиццы");
+                    request.setAttribute("info", "Недостаточно денег для покупки товара");
                     request.getRequestDispatcher("/index.jsp").forward(request, response);
                     break;
                 }
@@ -114,7 +114,7 @@ public class UserServlet extends HttpServlet {
                 furnitureFacade.edit(furniture);
                 History history = new History(furniture, buyer, new GregorianCalendar().getTime());
                 historyFacade.create(history);
-                request.setAttribute("info", "Пиццы '" + furniture.getName() + "' успешно куплена покупателем " + buyer.getFirstname() + " " + buyer.getLastname() + "!");
+                request.setAttribute("info", "Товар(ы) '" + furniture.getName() + "' успешно куплен(ы) покупателем " + buyer.getFirstname() + " " + buyer.getLastname() + "!");
                 request.getRequestDispatcher("/listFurnitures").forward(request, response);
                 break;
         }

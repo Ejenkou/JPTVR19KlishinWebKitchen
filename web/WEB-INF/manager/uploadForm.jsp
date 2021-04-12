@@ -11,6 +11,6 @@
               <input class="form-control" type="text" name="description" id="description">
             </div>
             <div class="row">
-                <button type="submit" class="btn btn-primary">Загрузить файл</button>
+                <button type="submit" class="btn btn-warning">Загрузить файл</button>
             </div>
         </form>
